@@ -156,7 +156,7 @@ export default function Home() {
         {/* クロージングセクション */}
         <Section
           id="contact"
-          heading="「No Manual, More Design」の実現へ"
+          heading="「No Manual, More 製品開発」の実現へ"
           className="relative overflow-hidden"
         >
           {/* 装飾要素 */}
