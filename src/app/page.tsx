@@ -1,103 +1,197 @@
-import Image from "next/image";
+import { RocketIcon, GlobeIcon, ArrowRightIcon } from "@radix-ui/react-icons";
+import { Button } from "@/components/ui/button";
+import { Header } from "@/components/header";
+import { Footer } from "@/components/footer";
+import { HeroSection } from "@/components/hero-section";
+import { Section } from "@/components/section";
+import { FeatureCard } from "@/components/feature-card";
+import { YouTubeVideo } from "@/components/youtube-video";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="flex flex-col min-h-screen">
+      <Header />
+      <main className="flex-1">
+        <HeroSection />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
+        {/* YouTubeセクション */}
+        <Section className="py-10 md:py-16 bg-muted/30 noise-bg">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-8 text-primary">
+              Concept of WikiWorks
+            </h2>
+            <div className="glass-effect rounded-xl overflow-hidden p-1">
+              <YouTubeVideo
+                videoId="w9bFt013F8Q"
+                className="shadow-xl rounded-xl overflow-hidden border border-primary/20"
+              />
+            </div>
+          </div>
+        </Section>
+
+        {/* 課題提起セクション */}
+        <Section
+          id="problem"
+          heading="マニュアル作成に、時間とコストを奪われていませんか？"
+          className="relative overflow-hidden wave-pattern"
+        >
+          {/* 装飾要素 */}
+          <div className="absolute inset-0 bg-muted/30 opacity-50"></div>
+
+          <div className="max-w-3xl mx-auto text-center relative z-10">
+            <div className="glass-effect p-8 rounded-xl">
+              <p className="text-lg">
+                製品開発において、マニュアル作成は避けて通れない重要な工程です。しかし、その作成に
+                <span className="font-semibold text-primary">
+                  時間とコストがかかりすぎていませんか?
+                </span>
+                煩雑な作業、終わりの見えない修正、多言語対応の壁...。これらの負担は、本来最も集中すべき
+                <span className="font-semibold text-primary">
+                  製品のデザイン
+                </span>
+                や品質向上から、大切な時間を奪っています。
+              </p>
+            </div>
+          </div>
+        </Section>
+
+        {/* ソリューション提示セクション */}
+        <Section
+          id="solution"
+          heading="WikiWorksが実現する、マニュアル作成の「時短革命」"
+          className="bg-primary/5 image-bg-manual relative overflow-hidden"
+        >
+          <div className="max-w-3xl mx-auto text-center">
+            <div className="glass-effect p-6 rounded-xl">
+              <p className="text-lg">
+                その課題、
+                <span className="font-semibold text-primary">
+                  WikiWorksなら解決可能です
+                </span>
+                。
+                WikiWorksは、AIと先進技術を活用し、マニュアル作成プロセスを根本から変革します。
+                時間のかかる手作業を自動化し、
+                <span className="font-semibold text-primary">
+                  WikiWorksで時短革命
+                </span>
+                を実現することで、
+                あなたのビジネスに新たな可能性をもたらします。
+              </p>
+            </div>
+          </div>
+        </Section>
+
+        {/* 機能セクション */}
+        <Section
+          id="features"
+          heading="圧倒的な効率化を可能にするワークスの機能"
+          description="WikiWorksは、革新的な機能でマニュアル作成の効率を飛躍的に向上させます。"
+          className="bg-white relative overflow-hidden"
+        >
+          <div className="absolute top-0 right-0 w-full h-full grid-pattern"></div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 relative z-10">
+            <FeatureCard
+              title="AIによる文章作成、構成自動化"
+              icon={<RocketIcon className="h-10 w-10" />}
+              accentColor="primary"
+            >
+              <b className="text-primary">AIが文章作成、構成も自動化</b>
+              。ゼロから作成する手間を省き、短時間で高品質なドラフトを作成できます。
+              構成も自動で最適化されるため、全体の整合性を保ちながら作業を進められます。
+            </FeatureCard>
+
+            <FeatureCard
+              title="スピーディな多言語翻訳"
+              icon={<GlobeIcon className="h-10 w-10" />}
+              accentColor="primary"
+            >
+              <b className="text-primary">多言語翻訳もスピーディに</b>
+              行えます。海外展開に不可欠な多言語マニュアルも、
+              迅速かつ正確に対応。グローバル市場への展開を強力に後押しします。
+            </FeatureCard>
+          </div>
+        </Section>
+
+        {/* ベネフィットセクション */}
+        <Section
+          id="benefits"
+          heading="ワークス導入で得られる未来"
+          className="bg-primary/5 image-bg-docs"
+        >
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-lg mb-8">
+              <span className="font-semibold text-primary">
+                WikiWorksで時短革命
+              </span>
+              を実現することで、 あなたは
+              <span className="font-semibold text-primary">
+                もっと製品を作ろう
+              </span>
+              という本来の目標に、
+              より多くのリソースを注ぐことができるようになります。
+              <span className="font-semibold text-primary">
+                製品のデザインにもっと時間をかけるべき
+              </span>
+              という理念を具現化し、
+              競争力の高い製品開発に集中できます。マニュアル作成の負担から解放され、
+              創造性と生産性を最大限に高めることが可能になります。
+            </p>
+
+            <Button
+              size="lg"
+              className="group bg-primary hover:bg-primary/90 text-white relative overflow-hidden"
+            >
+              <span className="relative z-10">詳細を見る</span>
+              <span className="absolute inset-0 h-full w-full bg-white opacity-0 group-hover:opacity-10 transition-opacity"></span>
+              <ArrowRightIcon className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </div>
+        </Section>
+
+        {/* クロージングセクション */}
+        <Section
+          id="contact"
+          heading="「No Manual, More Design」の実現へ"
+          className="relative overflow-hidden wave-pattern"
+        >
+          {/* 装飾要素 */}
+          <div className="absolute inset-0 bg-muted/30 opacity-50"></div>
+
+          <div className="max-w-3xl mx-auto text-center relative z-10">
+            <div className="glass-effect p-8 rounded-xl">
+              <p className="text-lg mb-10">
+                マニュアル作成の常識を変え、
+                <span className="font-semibold text-primary">
+                  製品のデザイン
+                </span>
+                に集中できる環境を創り出す。 それがワークスの使命です。
+                <span className="font-bold text-primary">ノーマニュアル</span>
+                <span className="font-bold text-primary">モアーデザイン</span>。
+                ワークスと共に、新たな価値創造の時代へ踏み出しましょう。
+              </p>
+
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button
+                  size="lg"
+                  className="bg-primary hover:bg-primary/90 text-white relative overflow-hidden group"
+                >
+                  <span className="relative z-10">今すぐ始める</span>
+                  <span className="absolute inset-0 h-full w-full bg-white opacity-0 group-hover:opacity-10 transition-opacity"></span>
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-primary text-primary hover:bg-primary/10"
+                >
+                  お問い合わせ
+                </Button>
+              </div>
+            </div>
+          </div>
+        </Section>
       </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      <Footer />
     </div>
   );
 }
