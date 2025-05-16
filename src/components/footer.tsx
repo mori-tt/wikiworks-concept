@@ -10,7 +10,11 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <div>
             <Image
-              src="/logo.png"
+              src={
+                process.env.NODE_ENV === "production"
+                  ? "/wikiworks-concept/logo.png"
+                  : "/logo.png"
+              }
               alt="WikiWorks Logo"
               width={120}
               height={30}

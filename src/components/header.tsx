@@ -33,7 +33,11 @@ export function Header() {
       <div className="container mx-auto flex items-center justify-between">
         <Link href="/" className="flex items-center space-x-2 relative z-10">
           <Image
-            src="/logo.png"
+            src={
+              process.env.NODE_ENV === "production"
+                ? "/wikiworks-concept/logo.png"
+                : "/logo.png"
+            }
             alt="WikiWorks Logo"
             width={120}
             height={30}
