@@ -1,5 +1,6 @@
-import { RocketIcon, GlobeIcon, ArrowRightIcon } from "@radix-ui/react-icons";
+import { RocketIcon, GlobeIcon } from "@radix-ui/react-icons";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { HeroSection } from "@/components/hero-section";
@@ -33,7 +34,7 @@ export default function Home() {
         <Section
           id="problem"
           heading="マニュアル作成に、時間とコストを奪われていませんか？"
-          className="relative overflow-hidden wave-pattern"
+          className="relative overflow-hidden"
         >
           {/* 装飾要素 */}
           <div className="absolute inset-0 bg-muted/30 opacity-50"></div>
@@ -84,7 +85,7 @@ export default function Home() {
         {/* 機能セクション */}
         <Section
           id="features"
-          heading="圧倒的な効率化を可能にするワークスの機能"
+          heading="圧倒的な効率化を可能にするWikiWorksの機能"
           description="WikiWorksは、革新的な機能でマニュアル作成の効率を飛躍的に向上させます。"
           className="bg-white relative overflow-hidden"
         >
@@ -116,7 +117,7 @@ export default function Home() {
         {/* ベネフィットセクション */}
         <Section
           id="benefits"
-          heading="ワークス導入で得られる未来"
+          heading="WikiWorks導入で得られる未来"
           className="bg-primary/5 image-bg-docs"
         >
           <div className="max-w-3xl mx-auto text-center">
@@ -138,14 +139,19 @@ export default function Home() {
               創造性と生産性を最大限に高めることが可能になります。
             </p>
 
-            <Button
-              size="lg"
-              className="group bg-primary hover:bg-primary/90 text-white relative overflow-hidden"
+            <Link
+              href="https://wikiworks.kodnet.co.jp/"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <span className="relative z-10">詳細を見る</span>
-              <span className="absolute inset-0 h-full w-full bg-white opacity-0 group-hover:opacity-10 transition-opacity"></span>
-              <ArrowRightIcon className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-            </Button>
+              <Button
+                size="lg"
+                className="group bg-primary hover:bg-primary/90 text-white relative overflow-hidden"
+              >
+                <span className="relative z-10">詳細を見る</span>
+                <span className="absolute inset-0 h-full w-full bg-white opacity-0 group-hover:opacity-10 transition-opacity"></span>
+              </Button>
+            </Link>
           </div>
         </Section>
 
@@ -153,7 +159,7 @@ export default function Home() {
         <Section
           id="contact"
           heading="「No Manual, More Design」の実現へ"
-          className="relative overflow-hidden wave-pattern"
+          className="relative overflow-hidden"
         >
           {/* 装飾要素 */}
           <div className="absolute inset-0 bg-muted/30 opacity-50"></div>
@@ -165,27 +171,39 @@ export default function Home() {
                 <span className="font-semibold text-primary">
                   製品のデザイン
                 </span>
-                に集中できる環境を創り出す。 それがワークスの使命です。
+                に集中できる環境を創り出す。 それがWikiWorksの使命です。
                 <span className="font-bold text-primary">ノーマニュアル</span>
                 <span className="font-bold text-primary">モアーデザイン</span>。
-                ワークスと共に、新たな価値創造の時代へ踏み出しましょう。
+                WikiWorksと共に、新たな価値創造の時代へ踏み出しましょう。
               </p>
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button
-                  size="lg"
-                  className="bg-primary hover:bg-primary/90 text-white relative overflow-hidden group"
+                <Link
+                  href="https://wikiworks.kodnet.co.jp/"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  <span className="relative z-10">今すぐ始める</span>
-                  <span className="absolute inset-0 h-full w-full bg-white opacity-0 group-hover:opacity-10 transition-opacity"></span>
-                </Button>
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-primary text-primary hover:bg-primary/10"
+                  <Button
+                    size="lg"
+                    className="bg-primary hover:bg-primary/90 text-white relative overflow-hidden group"
+                  >
+                    <span className="relative z-10">今すぐ始める</span>
+                    <span className="absolute inset-0 h-full w-full bg-white opacity-0 group-hover:opacity-10 transition-opacity"></span>
+                  </Button>
+                </Link>
+                <Link
+                  href="https://kodnet.co.jp/contact-form/?_gl=1*134pi6h*_ga*Njk5MjI2NzMuMTc0MzUwMDQ2OQ..*_ga_57ZPQGYY2H*czE3NDczODY5NTYkbzEzJGcwJHQxNzQ3Mzg2OTU2JGowJGwwJGgw*_ga_7KLZMWLQ3S*czE3NDczODY5NTYkbzEzJGcwJHQxNzQ3Mzg2OTU2JGo2MCRsMCRoMTE0NjQyMTU5MA.."
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  お問い合わせ
-                </Button>
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="border-primary text-primary hover:bg-primary/10"
+                  >
+                    お問い合わせ
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

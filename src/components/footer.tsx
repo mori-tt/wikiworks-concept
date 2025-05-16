@@ -1,12 +1,13 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Separator } from "@/components/ui/separator";
+import { Button } from "@/components/ui/button";
 
 export function Footer() {
   return (
     <footer className="bg-muted/40 py-12 border-t border-primary/10">
       <div className="container mx-auto px-4 md:px-6">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
           <div>
             <Image
               src="/logo.png"
@@ -19,7 +20,7 @@ export function Footer() {
               マニュアル作成の常識を変え、製品のデザインに集中できる環境を創り出します。
             </p>
           </div>
-          <div>
+          {/* <div>
             <h3 className="font-semibold text-lg mb-4">リンク</h3>
             <ul className="space-y-2">
               <li>
@@ -47,20 +48,22 @@ export function Footer() {
                 </Link>
               </li>
             </ul>
-          </div>
+          </div> */}
           <div>
             <h3 className="font-semibold text-lg mb-4">お問い合わせ</h3>
             <address className="text-muted-foreground not-italic">
               <p>お気軽にお問い合わせください</p>
-              <p className="mt-2">
-                Email:{" "}
-                <a
-                  href="mailto:info@wikiworks.example.com"
-                  className="text-primary hover:underline"
+              <div className="mt-4">
+                <Link
+                  href="https://kodnet.co.jp/contact-form/?_gl=1*134pi6h*_ga*Njk5MjI2NzMuMTc0MzUwMDQ2OQ..*_ga_57ZPQGYY2H*czE3NDczODY5NTYkbzEzJGcwJHQxNzQ3Mzg2OTU2JGowJGwwJGgw*_ga_7KLZMWLQ3S*czE3NDczODY5NTYkbzEzJGcwJHQxNzQ3Mzg2OTU2JGo2MCRsMCRoMTE0NjQyMTU5MA.."
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  info@wikiworks.example.com
-                </a>
-              </p>
+                  <Button className="bg-primary hover:bg-primary/90 text-white">
+                    お問い合わせ
+                  </Button>
+                </Link>
+              </div>
             </address>
           </div>
         </div>

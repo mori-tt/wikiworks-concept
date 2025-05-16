@@ -2,6 +2,7 @@
 
 import { Button } from "@/components/ui/button";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export function HeroSection() {
   const [isVisible, setIsVisible] = useState(false);
@@ -11,7 +12,7 @@ export function HeroSection() {
   }, []);
 
   return (
-    <section className="relative overflow-hidden py-24 md:py-32 wave-pattern">
+    <section className="relative overflow-hidden py-24 md:py-32">
       {/* 背景装飾 */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <div className="absolute -top-[10%] -right-[10%] h-[40%] w-[40%] rounded-full bg-primary/10 blur-3xl"></div>
@@ -34,9 +35,9 @@ export function HeroSection() {
             }`}
           >
             <span className="block mb-2">
-              <span className="text-primary">マニュアル</span>作成の時間を、
+              <span className="">マニュアル</span>作成の時間を、
             </span>
-            <span className="block text-primary">製品デザインへ。</span>
+            <span className="block">製品デザインへ。</span>
           </h1>
 
           <p
@@ -65,26 +66,35 @@ export function HeroSection() {
               isVisible ? "animate-fadeIn animate-delay-300" : "opacity-0"
             }`}
           >
-            <Button
-              size="lg"
-              className="bg-primary hover:bg-primary/90 text-white text-base relative overflow-hidden group"
+            <Link
+              href="https://wikiworks.kodnet.co.jp/"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              <span className="relative z-10">詳細を見る</span>
-              <span className="absolute inset-0 h-full w-full bg-white opacity-0 group-hover:opacity-10 transition-opacity"></span>
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-primary text-primary hover:bg-primary/10 text-base"
+              <Button
+                size="lg"
+                className="bg-primary hover:bg-primary/90 text-white text-base relative overflow-hidden group"
+              >
+                <span className="relative z-10">詳細を見る</span>
+                <span className="absolute inset-0 h-full w-full bg-white opacity-0 group-hover:opacity-10 transition-opacity"></span>
+              </Button>
+            </Link>
+            <Link
+              href="https://kodnet.co.jp/contact-form/?_gl=1*134pi6h*_ga*Njk5MjI2NzMuMTc0MzUwMDQ2OQ..*_ga_57ZPQGYY2H*czE3NDczODY5NTYkbzEzJGcwJHQxNzQ3Mzg2OTU2JGowJGwwJGgw*_ga_7KLZMWLQ3S*czE3NDczODY5NTYkbzEzJGcwJHQxNzQ3Mzg2OTU2JGo2MCRsMCRoMTE0NjQyMTU5MA.."
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              お問い合わせ
-            </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-primary text-primary hover:bg-primary/10 text-base"
+              >
+                お問い合わせ
+              </Button>
+            </Link>
           </div>
         </div>
       </div>
-
-      {/* 装飾セパレーター */}
-      <div className="absolute left-0 right-0 bottom-0 h-12 bg-white"></div>
     </section>
   );
 }
