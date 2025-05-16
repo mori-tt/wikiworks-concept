@@ -37,7 +37,7 @@ export function HeroSection() {
             <span className="block mb-2">
               <span className="">マニュアル</span>作成の時間を、
             </span>
-            <span className="block">製品デザインへ。</span>
+            <span className="block">製品開発へ。</span>
           </h1>
 
           <p
@@ -48,7 +48,7 @@ export function HeroSection() {
             WikiWorksが、あなたのビジネスに
             <span className="text-primary font-medium">「時短革命」</span>
             をもたらし、 本来注力すべき
-            <span className="text-primary font-medium">「製品のデザイン」</span>
+            <span className="text-primary font-medium">「製品の開発」</span>
             により多くの時間を費やすことを可能にします。
           </p>
 

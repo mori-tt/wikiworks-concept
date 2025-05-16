@@ -47,9 +47,7 @@ export default function Home() {
                   時間とコストがかかりすぎていませんか?
                 </span>
                 煩雑な作業、終わりの見えない修正、多言語対応の壁...。これらの負担は、本来最も集中すべき
-                <span className="font-semibold text-primary">
-                  製品のデザイン
-                </span>
+                <span className="font-semibold text-primary">製品の開発</span>
                 や品質向上から、大切な時間を奪っています。
               </p>
             </div>
@@ -132,7 +130,7 @@ export default function Home() {
               という本来の目標に、
               より多くのリソースを注ぐことができるようになります。
               <span className="font-semibold text-primary">
-                製品のデザインにもっと時間をかけるべき
+                製品の開発にもっと時間をかけるべき
               </span>
               という理念を具現化し、
               競争力の高い製品開発に集中できます。マニュアル作成の負担から解放され、
@@ -168,12 +166,10 @@ export default function Home() {
             <div className="glass-effect p-8 rounded-xl">
               <p className="text-lg mb-10">
                 マニュアル作成の常識を変え、
-                <span className="font-semibold text-primary">
-                  製品のデザイン
-                </span>
+                <span className="font-semibold text-primary">製品の開発</span>
                 に集中できる環境を創り出す。 それがWikiWorksの使命です。
                 <span className="font-bold text-primary">ノーマニュアル</span>
-                <span className="font-bold text-primary">モアーデザイン</span>。
+                <span className="font-bold text-primary">モアー製品開発</span>。
                 WikiWorksと共に、新たな価値創造の時代へ踏み出しましょう。
               </p>
 

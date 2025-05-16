@@ -21,7 +21,7 @@ export function Footer() {
               className="h-8 w-auto"
             />
             <p className="text-muted-foreground">
-              マニュアル作成の常識を変え、製品のデザインに集中できる環境を創り出します。
+              マニュアル作成の常識を変え、製品の開発に集中できる環境を創り出します。
             </p>
           </div>
           {/* <div>
